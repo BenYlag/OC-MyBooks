@@ -6,6 +6,8 @@ $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array('books' => $books));
 })->bind('home');
 
+// Book details with Author
 $app->get('/book/{id}', function ($id) use ($app) {
+    $book = $app['dao.book']->findOne($id);
     return $app['twig']->render('book.html.twig', array('book' => $book));
 })->bind('book');
