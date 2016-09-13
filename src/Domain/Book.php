@@ -33,9 +33,9 @@ class Book
     protected $summary;
 
     /**
-    * Associated book author
+    * Book author
     *
-    * @var MyBooks\Domain\Author
+    * @var string
     */
     protected $author;
 
@@ -79,7 +79,7 @@ class Book
         $this->summary = $summary;
     }
 
-    public function setAuthor(Author $author) {
+    public function setAuthor($author) {
         $this->author = $author;
     }
 }

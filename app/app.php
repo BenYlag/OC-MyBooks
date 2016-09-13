@@ -12,6 +12,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
 ));
+$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 // Register services.
 $app['dao.book'] = $app->share(function ($app) {
