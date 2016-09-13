@@ -9,13 +9,12 @@
     <header>
         <h1>MyBooks</h1>
     </header>
-   <?php
-    foreach ($books as $book): ?>
+   {% for book in books %}
         <article>
-            <h2><?php echo $book->getTitle(); ?></h2>
-            <p><?php echo $book->getSummary(); ?></p>
+            <h2>{{ book.title }}</h2>
+            <p>{{ book.summary }}</p>
         </article>
-    <?php endforeach; ?>
+    {% endfor %}
     <footer class="footer">
         <p><strong>MyBooks</strong> est construit avec PHP, Silex, Twig et Bootstrap.
         </p>
